@@ -6,6 +6,10 @@ struct User {
     sign_in_count: u64,
     active: bool,
 }
+#[derive(Debug)]
+struct RGB(i32, i32, i32);
+#[derive(Debug)]
+struct Point(i32, i32, i32);
 
 fn main() {
     // 構造体をインスタンス化
@@ -16,12 +20,20 @@ fn main() {
         sign_in_count: 1,
         active: true,
     };
+    let red = RGB(255, 0, 0);
+    println!("{:#?}", red);
 
-    println!("{:#?}", user1);
+    // println!("{:#?}", user1);
 
     let rebuild_user = build_user(String::from("umauma285@gmail.com"), String::from("Rust!"));
+    let user2 = User {
+        email: String::from("ikeda.web.develop@gmail.com"),
+        username: String::from("TarouTanaka"),
+        ..user1
+    };
 
-    println!("{:#?}", rebuild_user);
+    // println!("{:#?}", rebuild_user);
+    println!("{:#?}", user2);
 }
 
 // 新しいUser structureのインスタンスを返す
