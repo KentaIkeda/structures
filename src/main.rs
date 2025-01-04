@@ -33,7 +33,7 @@ fn main() {
     };
 
     // println!("{:#?}", rebuild_user);
-    println!("{:#?}", user2);
+    // println!("{:#?}", user2);
 }
 
 // 新しいUser structureのインスタンスを返す
